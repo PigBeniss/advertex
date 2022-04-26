@@ -1819,7 +1819,7 @@ header {
     margin-bottom: 30px;
   }
   .btn {
-    padding: 22px 70px;
+    padding: 22px 55px;
     white-space: nowrap;
   }
   .section {
@@ -1897,4 +1897,4 @@ header {
     width: 320px !important;
   }
 }
-";s:5:"files";a:3:{s:53:"E:\openserver\domains\advertex\assets\less\style.less";i:1650990575;s:57:"E:\openserver\domains\advertex\assets\less\normalize.less";i:1619933996;s:53:"E:\openserver\domains\advertex\assets\less\modal.less";i:1619933996;}s:7:"updated";i:1650990577;}
+";s:5:"files";a:3:{s:53:"E:\openserver\domains\advertex\assets\less\style.less";i:1650991563;s:57:"E:\openserver\domains\advertex\assets\less\normalize.less";i:1619933996;s:53:"E:\openserver\domains\advertex\assets\less\modal.less";i:1619933996;}s:7:"updated";i:1650991600;}
