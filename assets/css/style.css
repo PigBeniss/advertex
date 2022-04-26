@@ -459,7 +459,7 @@ body {
   align-items: center;
   position: absolute;
   right: 20px;
-  top: 15px;
+  top: 30px;
   box-sizing: border-box;
   outline: none;
   cursor: pointer;
@@ -503,7 +503,7 @@ body {
   position: absolute;
   right: -100%;
   top: 0;
-  width: 70%;
+  width: 300px;
   height: 100vh !important;
   background: white;
   display: -webkit-box;
@@ -552,6 +552,8 @@ header {
   color: white;
   -webkit-backdrop-filter: #000000 blur(20px);
   backdrop-filter: #000000 blur(20px);
+  position: relative;
+  overflow: hidden;
 }
 .center {
   text-align: center;
@@ -1800,7 +1802,7 @@ header {
     width: 100%;
     font-size: 25px;
   }
-  .grey{
+  .grey {
     padding: 20px;
   }
   .grey .block__item {
@@ -1817,7 +1819,8 @@ header {
     margin-bottom: 30px;
   }
   .btn {
-    padding: 22px 64px;
+    padding: 22px 70px;
+    white-space: nowrap;
   }
   .section {
     padding: 0;
@@ -1839,7 +1842,7 @@ header {
   }
   .btn-white {
     margin-top: 0;
-    padding: 22px 24px;
+    padding: 22px 4px;
   }
   .section-text__title {
     font-size: 30px;
@@ -1888,6 +1891,7 @@ header {
 }
 @media (max-width: 320px) {
   header,
+  .container,
   section,
   footer {
     width: 320px !important;
