@@ -1,0 +1,943 @@
+<!-- <?php	
+	require "./assets/less/lessc.inc.php";	
+	function autoCompileLess($inputFile, $outputFile) {
+	  // load the cache
+	  $cacheFile = $inputFile.".cache";
+	  if (file_exists($cacheFile)) {
+		$cache = unserialize(file_get_contents($cacheFile));
+	  } else {
+		$cache = $inputFile;
+	  }
+	  $less = new lessc;
+	  $newCache = $less->cachedCompile($cache);
+	  if (!is_array($cache) || $newCache["updated"] > $cache["updated"]) {
+		file_put_contents($cacheFile, serialize($newCache));
+		file_put_contents($outputFile, $newCache['compiled']);
+	  }
+	}
+	autoCompileLess('./assets/less/style.less', './assets/css/style.css');
+// class="col-xs-6 wow fadeIn" data-wow-delay="0.3s" data-wow-duration="0.6s"
+?> -->
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<meta name="viewport" content="width=1300px">-->
+    <link rel="stylesheet" href="./assets/css/style.css" type="text/css" />
+</head>
+
+<body>
+    <!--
+    <div class="wrapper">       
+        <div id="mobile-menu">
+            <div class="block">
+                <ul>
+                    <li><a href=""><span>Link</span></a></li>
+                    <li><a href=""><span>Link</span></a></li>
+                    <li><a href=""><span>Link</span></a></li>
+                    <li><a href=""><span>Link</span></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <header>
+            <div class="container">
+                <div class="block df jb">
+                    <a class="logo" href="">
+                        LOGO
+                    </a>
+                    <div class="menu">
+                        <!-- Кнопка Мобильного Меню -->
+    <!-- <button id="burger-menu">
+                            <div class="box box_item1"></div>
+                            <div class="box box_item2"></div>
+                            <div class="box box_item3"></div>
+                        </button>                        
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="help">
+            <div class="container">
+                <div class="tabs">
+                    <ul class="tabs__caption">
+                        <li class="active">Таб 1</li>
+                        <li class="">Таб 2</li>
+                        <li class="">Таб 3</li>
+                    </ul>
+                    <div class="tabs__content active">
+                        Контент 1 таба
+                    </div>
+                    <div class="tabs__content">
+                        Контент 2 таба
+                    </div>
+                    <div class="tabs__content">
+                        Контент 3 таба
+                    </div>
+                </div>
+                <hr>
+                <button class="md-trigger" data-modal="modal-1">Модальное окно</button>
+                <hr>
+                
+                
+            </div>
+
+        </section>
+        
+    </div>
+    <div class="md-modal md-effect-1" id="modal-1">
+        <div class="md-content">
+            <h3>Модальные окна</h3>
+            <div>
+                <p> Это модальное окно. Вы можете выполнять следующие действия с ним:</p>
+                <ul>
+                    <li><strong>Читать:</strong> модальные окна, вероятно, несут важную текстовую информацию, так что не забудьте прочитать то, что в них написано.</li>
+                    <li><strong>Смотреть:</strong> модальные окна несут визуальную информацию, на которую приятно смотреть.</li>
+                    <li><strong>Закрыть:</strong> нажмите на кнопку, чтобы закрыть модальное окно.</li>
+                </ul>
+                <button class="md-close">Закрыть!</button>
+            </div>
+        </div>
+    </div>
+    <div class="md-overlay"></div>the overlay element -->
+
+    <header class="header">
+        <div id="page" class="wrapper">
+            <div id="mobile-menu">
+                <div class="blockk">
+                    <ul>
+                        <li class="menu-main__item"><a href="" class="menu-main__link scroll"
+                                data-target=".slide-1">Home</a>
+                        </li>
+                        <li class="menu-main__item"><a href="" class="menu-main__link scroll"
+                                data-target=".slide-2">Services</a></li>
+                        <li class="menu-main__item"><a href="" class="menu-main__link scroll"
+                                data-target=".slide-3">About
+                                us</a></li>
+                        <li class="menu-main__item"><a href="" class="menu-main__link scroll"
+                                data-target=".slide-4">Contacts</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="menu ">
+                <!--   Кнопка Мобильного Меню --->
+                <button id="burger-menu">
+                    <div class="box box_item1"></div>
+                    <div class="box box_item2"></div>
+                    <div class="box box_item3"></div>
+                </button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="header__top">
+                <div class="logo">
+                    <img src="assets/img/logo.png" alt="" class="logo__img">
+                </div>
+                <ul class="menu-main">
+                    <li class="menu-main__item"><a href="" class="menu-main__link scroll"
+                            data-target=".slide-1">Home</a></li>
+                    <li class="menu-main__item"><a href="" class="menu-main__link scroll"
+                            data-target=".slide-2">Services</a>
+                    </li>
+                    <li class="menu-main__item"><a href="" class="menu-main__link scroll" data-target=".slide-3">About
+                            us</a>
+                    </li>
+                    <li class="menu-main__item"><a href="" class="menu-main__link scroll"
+                            data-target=".slide-4">Contacts</a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="header__body">
+                <div class="header__item">
+                    <h1 class="header__title">We are Advertex!</h1>
+                    <div class="header__subtitle">A digital marketing agency from UAE with experience in Google Ads,
+                        Facebook Ads, and TikTok Ads.</div>
+                    <div class="header__text">We have vast experience in buying and selling RTB advertising, mobile
+                        promotion, and software development intended to automate marketing tasks.</div>
+                    <div class="btn-block">
+                        <a class="btn scroll" data-target=".slide-4">Work with us </a>
+                    </div>
+
+                </div>
+                <div class="header__img">
+                    <!-- <img src="assets/img/as.png" alt=""> -->
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="service slide-2">
+        <div class="container">
+            <div class="service__title">
+                Our services
+            </div>
+            <div class="block block-cit">
+                <div class="block__item ">
+                    <div class="block__img">
+                        <img src="assets/img/image1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="block__text">
+                    <div data-da=".block-cit, 991, 1" class="block__text-title ">Advertising with Google Ads</div>
+                    <div class="block__text-text">
+                        <p> Our team has extensive experience in running successful advertising
+                            campaigns with Google Ads.</p>
+                        <p> We will analyze your Google Ads potential and provide you with a detailed forecast of the
+                            sales
+                            opportunities with Google Ads that are available for your company.</p>
+                        <p> We will take into account your previous data and model a precise marketing plan for your
+                            target
+                            markets.</p>
+                    </div>
+                </div>
+            </div>
+            <h2 class="section-title">We will run ads for your product on all major Google platforms:</h2>
+            <div class="ads">
+                <div class="ads__item">
+                    <div class="ads__item-img">
+                        <img src="assets/img/google.svg" alt="">
+                    </div>
+                    <div class="ads__item-text">Google search</div>
+                </div>
+                <div class="ads__item">
+                    <div class="ads__item-img">
+                        <img src="assets/img/yt.svg" alt="">
+                    </div>
+                    <div class="ads__item-text">YouTube</div>
+                </div>
+                <div class="ads__item">
+                    <div class="ads__item-img">
+                        <img src="assets/img/gp.png" alt="">
+                    </div>
+                    <div class="ads__item-text">Google Play</div>
+                </div>
+                <div class="ads__item">
+                    <div class="ads__item-img">
+                        <img src="assets/img/gd.svg" alt="">
+                    </div>
+                    <div class="ads__item-text">Google Discover</div>
+                </div>
+                <div class="ads__item">
+                    <div class="ads__item-img">
+                        <img src="assets/img/gdn.svg" alt="">
+                    </div>
+                    <div class="ads__item-text">Google Display Network</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="block1">
+        <div class="container">
+            <div data-da=".block-2, 991, 1" class="block__text-title center">
+                Managing your advertising in Google Ads will include the following:
+            </div>
+            <div class="block reverse block-2">
+                <div class="block__item">
+                    <div class="block__img">
+                        <img class="small" src="assets/img/image23.jpg" alt="" ">
+                    </div>
+                </div>
+                <div class=" block__list">
+                        <div class="block__list-item">
+                            <div class="block__list-text block__list-text--1">
+                                Developing a
+                                promotion strategy
+                                in
+                                Google Ads
+                            </div>
+                            <div class="block__list-text block__list-text--2">
+                                Thorough
+                                keyword research
+                            </div>
+                            <div class="block__list-text block__list-text--3">
+                                Creating and
+                                testing advertisements
+                            </div>
+
+
+                        </div>
+                        <div class="block__list-item">
+                            <div class="block__list-text block__list-text--4">
+                                Selecting and
+                                adapting rate strategies
+                            </div>
+                            <div class="block__list-text block__list-text--5">
+                                Tracking and
+                                modeling conversions
+                            </div>
+
+                            <div class="block__list-text block__list-text--6">
+                                Reporting
+                                preparation
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--                 
+                <ul class="block__text-list">
+                    <
+                    <li class="block__text-list-item"></li>
+                    <li class="block__text-list-item"></li>
+                    <li class="block__text-list-item"></li>
+                    <li class="block__text-list-item">
+                    </li>
+                    <li class="block__text-list-item"></li>
+                </ul> -->
+                </div>
+                <div class="block-btn">
+                    <a class="btn scroll" data-target=".slide-4">contact us </a>
+                </div>
+
+            </div>
+
+
+    </section>
+    <section class="section">
+        <div class="container">
+            <div class="block block-3">
+                <div class="block__item ">
+                    <div class="block__img">
+                        <img class="" src="assets/img/fb.jpg" alt="">
+                    </div>
+                </div>
+                <div class="block__text">
+                    <div data-da=".block-3, 991, 1" class="block__text-title">Advertising with Facebook Ads</div>
+                    <div class="block__text-text">
+                        <p> We provide a full range of services related to digital social media marketing, from
+                            advertising creatives to optimizing advertising campaigns.</p>
+                        <p> We are prepared to take over your Facebook Ads marketing campaigns, increase your conversion
+                            rate, and improve your ROI.</p>
+                        <p> We help businesses of all sizes, from start-ups to enterprise-level companies, achieve their
+                            Facebook advertising goals.</p>
+
+                    </div>
+                    <div class="btn-block">
+                        <a class="btn scroll" data-target=".slide-4">contact us </a>
+                    </div>
+                </div>
+            </div>
+            <div class="block reverse grey block-4">
+                <div class="block__item">
+                    <div class="block__img">
+                        <img class="" src="assets/img/img3.jpg" alt="">
+                    </div>
+                </div>
+                <div class="block__text">
+                    <div data-da=".block-4, 991, 1" class="block__text-title">How Facebook advertising works</div>
+                    <div class="block__text-text">
+                        <p> Using the Facebook social media platform is a great way to attain your business goals.</p>
+                        <p> Facebook marketing can be used for many purposes, from promoting services and products to
+                            raising awareness of a cause or event. Facebook lets you create ads that target specific
+                            audiences based on age group, location, interests, and more.</p>
+                    </div>
+                    <div class="btn-block">
+                        <a class="btns croll" data-target=".slide-4">GET ADVICE NOW </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="block2">
+        <div class="container">
+            <div data-da=".block-5, 991, 1" class="block__text-title center">
+                Why working with an agency is preferable
+            </div>
+            <div class="block block-5">
+                <div class="block__item">
+                    <div class="block__img">
+                        <img class="small" src="assets/img/img4.jpg" alt="">
+                    </div>
+                </div>
+                <div class="block__text">
+
+                    <div class="block__text-text">
+                        <p class="gg"> Facebook advertising allows you to reach a large number of social media users
+                            within just a
+                            few days; however, it's important to have a well-designed campaign because your ad's ROI
+                            depends on your entire marketing funnel.</p>
+                        <p> As an agency, we have extensive experience in the field of Facebook advertising campaigns,
+                            from writing conversion-focused copy and creating unique offers to analyzing data from
+                            advertising accounts, which allows you to turn your advertising budget into quality leads.
+                        </p>
+                        <p> Think of a Facebook advertising agency as a turnkey system for scaling your business without
+                            hiring and managing a bunch of employees.</p>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="block reverse block-6">
+                <div class="block__item">
+                    <div class="block__img">
+                        <img src="assets/img/img2.png" alt="">
+                    </div>
+                </div>
+                <div class="block__text">
+                    <div data-da=".block-6, 991, 1" class="block__text-title">You should contact us if:</div>
+                    <div class="t1">
+                        <div class="t2 order1">
+                            <div class="tt2 ">
+                                <div class="square">01</div>
+                                You are too busy to do Facebook advertising on your own.
+                            </div>
+                            <div class="tt2 ">
+                                <div class="square">02</div>
+                                You lack the required experience.
+                            </div>
+
+
+                        </div>
+                        <div class="t2 order3">
+                            <div class="tt2 ">
+                                <div class="square">04</div>
+                                You do not wish to squander your marketing budget.
+                            </div>
+                            <div class="tt2">
+                                <div class="square">05</div>
+                                You want to gain an edge over your competitors.
+                            </div>
+
+
+                        </div>
+                        <div class="tt2 tt2--full">
+                            <div class="square">03</div>
+                            You do not have the necessary tools to analyze the effectiveness of advertising
+                            campaigns.
+                        </div>
+                    </div>
+                    <div class="block__text-text">
+                        <p class="gg"> Advertising on Facebook is an effective marketing tool that can double or triple
+                            your income, but it takes the help of professionals to get the most out of it.</p>
+
+
+                    </div>
+
+                    <div class="btn-block">
+                        <a class="btn scroll" data-target=".slide-4">contact us </a>
+                    </div>
+                </div>
+            </div>
+
+
+    </section>
+    <section class="sectio">
+        <div class="container">
+            <div class="block block-7">
+                <div class="block__item">
+                    <div class="block__img">
+                        <img src="assets/img/tt.svg" alt="">
+                    </div>
+                </div>
+                <div class="block__text">
+                    <div data-da=".block-7, 991, 1" class="block__text-title">Advertising with TikTok Ads</div>
+                    <div class="block__text-text">
+                        <p> TikTok is currently the most downloaded social media app in history. The new social media
+                            platform is the best way to reach the millions of people aged 16 to 34 who make up over 77%
+                            of TikTok's user base.</p>
+                        <p> Every day, more and more people are choosing to use TikTok. The platform has already become
+                            extremely popular all around the world, allowing brands to tap into and interact with a
+                            large, diverse, high-value young audience like never before.</p>
+
+                    </div>
+                    <div class="btn-block">
+                        <a class="btn scroll" data-target=".slide-4">GET ADVICE NOW </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="">
+        <div class="container">
+            <div class="block-purple">
+                <div class="block__text-title center block-purple__title">
+                    What we offer
+                </div>
+                <div class="block-purple__wrap">
+                    <div class="block-purple__item">
+                        <div class="block-purple__icon"><img src="assets/img/purp1.svg" alt=""></div>
+                        <div class="block-purple__text">Our team members are experts in TikTok advertising and will
+                            oversee all aspects of your ad campaign, including account management, ad creation, and
+                            targeting.</div>
+                    </div>
+                    <div class="block-purple__item">
+                        <div class="block-purple__icon"><img src="assets/img/purp2.svg" alt=""></div>
+                        <div class="block-purple__text">We partner with talent who will create video content for TikTok
+                            to drive TikTok users to your products.</div>
+                    </div>
+                    <div class="block-purple__item">
+                        <div class="block-purple__icon"><img src="assets/img/purp3.svg" alt=""></div>
+                        <div class="block-purple__text">Our analysts will track your campaign performance to help you
+                            figure out what new features are available and how to use them.</div>
+                    </div>
+                </div>
+                <div class="block-btn">
+                    <a class="btn-white scroll" data-target=".slide-4">GET STARTED WITH TIKTOK ADS </a>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <section class="">
+        <div class="container">
+            <div class="section-text">
+                <div class="section-text__title">Buying and selling advertising using RTB technology</div>
+                <div class="section-text__subtitle">Real-time bidding (RTB) is a technology for buying online
+                    advertising at
+                    online auctions when decisions are made on hundreds of auctions in thousandths of a second.</div>
+                <div class="section-text__text">The RTB system buys the right placement at the right time—when the price
+                    per
+                    display meets the advertiser's requirements.
+
+                </div>
+                <div class="section-text__text">RTB allows to increase reach and minimize CPM</div>
+            </div>
+
+        </div>
+    </section>
+    <section class="block3">
+        <div class="container">
+            <div class="block block-8">
+                <div class="block__item">
+                    <div class="block__img">
+                        <img src="assets/img/img5.jpg" alt="">
+                    </div>
+                </div>
+                <div class="block__text">
+                    <div data-da=".block-8, 991, 1" class="block__text-title">Benefits of RTB advertising including:
+                    </div>
+                    <div class="t1">
+                        <div class="t2">
+                            <div class="tt2 ">
+                                <div class="tt2-img">
+                                    <img src="assets/img/icon7.svg" alt="">
+                                </div>
+                                Auction principle of advertising placement.
+                            </div>
+                            <div class="tt2 ">
+                                <div class="tt2-img">
+                                    <img src="assets/img/icon8.svg" alt="">
+                                </div>
+                                Depending on the sales stage, the audience receives relevant messages from the
+                                advertiser.
+                            </div>
+                            <div class="tt2 ">
+                                <div class="tt2-img">
+                                    <img src="assets/img/icon9.svg" alt="">
+                                </div>
+                                Contact and conversion will cost less.
+                            </div>
+                        </div>
+                        <div class="t2">
+                            <div class="tt2 ">
+                                <div class="tt2-img">
+                                    <img src="assets/img/icon10.svg" alt="">
+                                </div>
+                                Cross-platform data is used to optimize advertising materials in real time on all
+                                communication channels at once.
+                            </div>
+                            <div class="tt2 ">
+                                <div class="tt2-img">
+                                    <img src="assets/img/icon11.svg" alt="">
+                                </div>
+                                Only high-quality target audience.
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="btn-block">
+                        <a class="btn scroll" data-target=".slide-4">GET ADVICE NOW</a>
+                    </div>
+                </div>
+            </div>
+            <div class="block reverse grey block-9">
+                <div class="block__item">
+                    <div class="block__img">
+                        <img class="" src="assets/img/img8.jpg" alt="">
+                    </div>
+                </div>
+                <div class="block__text">
+                    <div data-da=".block-9, 991, 1" class="block__text-title">What we offer</div>
+                    <div class="block__text-text">
+                        <p> We collaborate with the largest platforms that buy advertising on online exchanges for
+                            the
+                            benefit of advertisers, as well as those platforms that sell advertising space for
+                            publishers in online auctions.</p>
+                        <p> We will help you optimize both buying and selling advertising using RTB technology.</p>
+                    </div>
+                    <div class="btn-block">
+                        <a class="btn scroll" data-target=".slide-4">CONTACT US</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </section>
+
+    <section class="block1">
+        <div class="container">
+            <div class="section-text">
+                <div class="section-text__title">Mobile Marketing</div>
+                <div class="section-text__subtitle">Our agency realizes the importance of being mobile and has
+                    experience working with brands.</div>
+                <div class="section-text__text">
+                    We derive the most out of mobile devices.
+                    <br>
+                    Mobile-first is not just a buzzword but the present and the future of digital communications.
+                    <br>
+                    We use all of our experience to reach your target customers at the time they are most likely to be
+                    interested.
+
+
+                </div>
+            </div>
+            <div class="block block-10">
+                <div class="block__item">
+                    <div class="block__img">
+                        <img src="assets/img/image14.jpg" alt="">
+                    </div>
+                </div>
+                <div class="block__text">
+                    <div data-da=".block-10, 991, 1" class="block__text-title">Our approach:</div>
+                    <div class="t1">
+                        <div class="t2">
+                            <div class="tt2">
+                                <div class="square"><img src="assets/img/Check.svg" alt=""></div>
+                                We tailor campaigns to increase brand value.
+                            </div>
+                            <div class="tt2">
+                                <div class="square"><img src="assets/img/Check.svg" alt=""></div>
+                                We develop a comprehensive mobile marketing strategy that enhances awareness and
+                                increases
+                                conversion.
+                            </div>
+
+                        </div>
+                        <div class="t2">
+                            <div class="tt2 ">
+                                <div class="square"><img src="assets/img/Check.svg" alt=""></div>
+                                We use a multi-channel approach to prepare a mobile marketing strategy for your target
+                                audience.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block__text-title">How we work:</div>
+                    <div class="t1">
+                        <div class="t2">
+                            <div class="tt2">
+                                <div class="square">01</div>
+                                We provide measurable growth.
+                            </div>
+
+                            <div class="tt2 ">
+                                <div class="square">02</div>
+                                We create mobile-optimized landing pages with clear calls to action.
+                            </div>
+
+                        </div>
+                        <div class="t2">
+                            <div class="tt2">
+                                <div class="square">03</div>
+                                We use mobile data to track conversions, traffic quality and quantity, page views, and
+                                bounce rates
+                            </div>
+                            <div class="tt2 ">
+                                <div class="square">04</div>
+                                We use platforms that only charge when mobile ads result in a store visit.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="section4">
+        <div class="container">
+            <div data-da=".block-11, 991, 1" class="block__text-title center">
+                Advantages of working with us:
+            </div>
+            <div class="block reverse block-11">
+                <div class="block__item">
+                    <div class="block__img">
+                        <img src="assets/img/img10.jpg" alt="">
+                    </div>
+                </div>
+                <div class="block__text">
+
+                    <div class="t1">
+
+                        <div class="tt2 ">
+                            <div class="tt2-img">
+                                <img src="assets/img/icon12.svg" alt="">
+                            </div>
+                            Our mobile marketing services will help you stand out from the competition and cut down on
+                            the noise to reach your target audience.
+                        </div>
+                        <div class="tt2 ">
+                            <div class="tt2-img">
+                                <img src="assets/img/icon13.svg" alt="">
+                            </div>
+                            Our mobile marketing agency is always at the forefront of trends and technologies and uses
+                            analytics reports, data, and software to target audiences.
+                        </div>
+                        <div class="tt2 ">
+                            <div class="tt2-img">
+                                <img src="assets/img/icon14.svg" alt="">
+                            </div>
+                            We offer consistent and effective strategies and tailor each mobile marketing campaign to
+                            drive action and build momentum.
+                        </div>
+
+                        <div class="tt2 ">
+                            <div class="tt2-img">
+                                <img src="assets/img/icon15.svg" alt="">
+                            </div>
+                            We offer fresh ideas and perspectives and are well-equipped for major consumer-facing
+                            marketing campaigns.
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="block-btn center">
+                <a class="btn scroll" data-target=".slide-4">Connect with us</a>
+            </div>
+        </div>
+    </section>
+    <section class="section5">
+        <div class="container">
+            <div class="section-text">
+                <div class="section-text__title">Developing software for automation of marketing tasks</div>
+                <div class="section-text__subtitle">To run successful advertising campaigns, you need to not only cover
+                    multiple marketing channels with relevant content but also properly analyze performance and think
+                    several steps ahead with the help of relevant analytics.</div>
+                <div class="section-text__text">
+                    Our team has accumulated vast experience in developing marketing solutions.
+                    <br>
+                    We can offer you end-to-end marketing solution integrations that will surely increase the response
+                    time of your customers, leading to deeper user engagement.
+                    <br>
+                    Thanks to this, you can count on increases in ROI and customer lifetime value.
+
+
+                </div>
+            </div>
+            <div class="block-purple">
+                <div class="block__text-title center block-purple__title">
+                    What we offer
+                </div>
+                <div class="block-purple__wrap">
+                    <div class="block-purple__item">
+                        <div class="block-purple__icon"><img src="assets/img/purple4.svg" alt=""></div>
+                        <div class="block-purple__text">Developing marketing automation solutions tailored to your needs
+                            from scratch
+                        </div>
+                    </div>
+                    <div class="block-purple__item">
+                        <div class="block-purple__icon"><img src="assets/img/purple5.svg" alt=""></div>
+                        <div class="block-purple__text">Refinement and modernization of your existing software</div>
+                    </div>
+                    <div class="block-purple__item">
+                        <div class="block-purple__icon"><img src="assets/img/purple6.svg" alt=""></div>
+                        <div class="block-purple__text">Integration of ready-made solutions</div>
+                    </div>
+                    <div class="block-purple__item">
+                        <div class="block-purple__icon"><img src="assets/img/purple7.svg" alt=""></div>
+                        <div class="block-purple__text">100% confidentiality guarantee and NDA compliance</div>
+                    </div>
+                    <div class="block-purple__item">
+                        <div class="block-purple__icon"><img src="assets/img/purple8.svg" alt=""></div>
+                        <div class="block-purple__text">First-class technical support and regular updates</div>
+                    </div>
+                </div>
+                <div class="block-btn">
+                    <a class="btn-white scroll" data-target=".slide-4">Request a consultation </a>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <section class="block2 slide-3">
+        <div class="container">
+            <div class="section-text ">
+                <div class="section-text__title ">About us</div>
+                <div class="section-text__subtitle">We are a full-service digital marketing agency that will work as
+                    your strategic partner.</div>
+                <div class="section-text__text">
+                    Whether you need a one-time project or a partner agency, you will get an expert team of ad buyers
+                    from the largest advertising networks, mobile marketers, developers, and analysts who will
+                    collaborate, innovate, and push the boundaries to achieve the desired results.
+                    <br>
+                    We believe that our competitive advantage is the quality of our team. As we grow, we make every
+                    effort to hire and develop the very best people who strive for continuous innovation and maximum
+                    customer focus.
+
+                </div>
+            </div>
+            <div class="block block-12 ">
+                <div class="block__item ">
+                    <div class="block__img">
+                        <img class="" src="assets/img/img15.jpg" alt="">
+                    </div>
+                </div>
+                <div class="block__text ">
+
+                    <div class="block__text-text ">
+                        <p data-da=".block-12, 991, 1" class="hh"> Our company was created by Mr. Chalum Choojit, the
+                            founder of
+                            GMT Digital, a digital
+                            marketing agency that has been successfully working with clients around the world for over
+                            six years.</p>
+                        <p> Mr. Chalum Choojit has many years of experience in building effective business processes in
+                            the field of e-commerce and digital marketing.</p>
+                        <p>His professionalism allows us to provide a quality service that makes our customers happy.
+                        </p>
+                    </div>
+                    <div class="btn-block">
+                        <a class="btn scroll" data-target=".slide-4">GET ADVICE NOW</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="section-text">
+                <div class="section-text__title">About us</div>
+            </div>
+            <div class="footer__social slide-4">
+                <div class="footer__social-item">
+                    <div class="footer__subtitle">ADVERTEX LLC</div>
+                    <div class="footer__text">
+                        <span class="foot1">Address:</span>Address: street, city, zip code, UAE
+                    </div>
+                    <div class="footer__text">
+                        <span class="foot2">Reg.No.:</span>123456
+                    </div>
+                    <div class="footer__text">
+                        <span class="foot3">E-Mail:</span>info@advertex.biz
+
+                    </div>
+                    <div class="footer__text">
+                        <span class="foot4">Phone:</span>+9 71 000 00 00
+                    </div>
+                    <div class="footer__map">
+                        <img src="assets/img/map.jpg" alt="">
+                    </div>
+
+                </div>
+                <div class="footer__social-item">
+                    <div class="form ">
+                        <div class="form__title">
+                            Please enter the information below and we’ll get right back to you
+                        </div>
+                        <div class="form__box">
+                            <div class="form__item">
+                                <input class="form__input" type="text" placeholder="First Name">
+                            </div>
+                            <div class="form__item">
+                                <input class="form__input" type="text" placeholder="Last Name">
+                            </div>
+                        </div>
+                        <div class="form__item">
+                            <input class="form__input" type="text" placeholder="Company Name">
+                        </div>
+                        <div class="form__box">
+                            <div class="form__item">
+                                <input class="form__input" type="text" placeholder="E-mail ">
+                            </div>
+                            <div class="form__item">
+                                <input class="form__input" type="text" placeholder="Phone">
+                            </div>
+                        </div>
+                        <div class="form__item">
+                            <input class="form__input" type="text" placeholder="Website">
+                        </div>
+                        <div class="form__item">
+                            <textarea name="" id="" cols="" rows="" placeholder="How can we help?"></textarea>
+                        </div>
+                        <div class="block-btn">
+                            <a class="btn " ">SUBMIT</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class=" footer__bot">
+                                <div class="footer__text">© 2022 Advertex LLC, All rights reserved</div>
+                                <div class="footer__link"><a href="">Privacy Policy</a></div>
+                        </div>
+                    </div>
+    </footer>
+
+
+
+
+    <link rel="stylesheet" href="./assets/css/animate.css" type="text/css" />
+
+    <script src="./assets/js/dynamicAdapt.js"></script>
+    <!-- FOR MODAL -->
+    <script src="./assets/js/classie.js"></script>
+    <script src="./assets/js/modalEffects.js"></script>
+    <script>
+    var polyfilter_scriptpath = './assets/js/';
+    </script>
+    <script src="./assets/js/cssParser.js"></script>
+    <script src="./assets/js/css-filters-polyfill.js"></script>
+    <!-- FOR MODAL -->
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="./assets/js/jquery.validate.min.js"></script>
+    <script src="./assets/js/jquery.maskedinput.js"></script>
+    <script src="./assets/js/wow.min.js"></script>
+
+    <!-- https://github.com/verlok/vanilla-lazyload#-getting-started---html -->
+    <script src="./assets/js/lazyload.js"></script>
+
+    <!-- Counter -->
+    <script src="./assets/js/counter/jquery.cookie.js"></script>
+    <script src="./assets/js/counter/jquery.plugin.js"></script>
+    <script src="./assets/js/counter/jquery.countdown.js"></script>
+    <script src="./assets/js/counter/jquery.countdown-ru.js"></script>
+    <script>
+    var endDateTime = new Date();
+    var nowDateTime = new Date(3600 * 24 * 1000);
+    </script>
+    <!-- End Counter -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="./assets/js/script.js"></script>
+
+    <link rel="stylesheet" href="./assets/css/swiper/swiper-bundle.min.css">
+    <script src="./assets/js/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+    var lazyLoadInstance = new LazyLoad({});
+    /*
+    var swiper = new Swiper('.slider', {
+        observer: true,
+        observeParents: true,
+        navigation: {
+            nextEl: '.btn-next',
+            prevEl: '.btn-prev',
+        },
+    });
+    
+    */
+    </script>
+</body>
+
+</html>
