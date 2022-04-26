@@ -1755,6 +1755,9 @@ header {
   .menu-main {
     display: none;
   }
+  .logo {
+    margin-top: 20px;
+  }
   .container {
     width: 350px !important;
   }

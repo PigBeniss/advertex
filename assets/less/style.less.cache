@@ -1,4 +1,4 @@
-a:4:{s:4:"root";s:24:"./assets/less/style.less";s:8:"compiled";s:37294:"@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap');
+a:4:{s:4:"root";s:24:"./assets/less/style.less";s:8:"compiled";s:37330:"@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap');
 @charset "UTF-8";
 @-ms-viewport {
   width: device-width;
@@ -1755,6 +1755,9 @@ header {
   .menu-main {
     display: none;
   }
+  .logo {
+    margin-top: 20px;
+  }
   .container {
     width: 350px !important;
   }
@@ -1887,4 +1890,4 @@ header {
     width: 320px !important;
   }
 }
-";s:5:"files";a:3:{s:53:"E:\openserver\domains\advertex\assets\less\style.less";i:1650941196;s:57:"E:\openserver\domains\advertex\assets\less\normalize.less";i:1619933996;s:53:"E:\openserver\domains\advertex\assets\less\modal.less";i:1619933996;}s:7:"updated";i:1650941197;}
+";s:5:"files";a:3:{s:53:"E:\openserver\domains\advertex\assets\less\style.less";i:1650943460;s:57:"E:\openserver\domains\advertex\assets\less\normalize.less";i:1619933996;s:53:"E:\openserver\domains\advertex\assets\less\modal.less";i:1619933996;}s:7:"updated";i:1650943461;}
