@@ -1800,6 +1800,9 @@ header {
     width: 100%;
     font-size: 25px;
   }
+  .grey{
+    padding: 20px;
+  }
   .grey .block__item {
     width: 100%;
   }
